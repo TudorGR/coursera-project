@@ -1,6 +1,12 @@
 import React from "react";
-import image1 from "../assets/lemon dessert.jpg";
 import image2 from "../assets/restaurant chef B.jpg";
+import special1 from "../assets/greek salad.jpg";
+import bike from "../assets/f21897ecfdee7d5927d1ec7b61408485ab9f6838.jpg";
+import stars from "../assets/stars.png";
+import person1 from "../assets/person1.jpg";
+import person2 from "../assets/person2.jpg";
+import person3 from "../assets/person3.jpg";
+import person4 from "../assets/person4.jpg";
 
 const Main = () => {
   return (
@@ -12,13 +18,96 @@ const Main = () => {
             <button>Online Menu</button>
           </div>
           <div className="highlights-bottom-part">
-            <section>special1</section>
-            <section>special2</section>
-            <section>special3</section>
+            <section>
+              <img src={special1} />
+              <div>
+                <h3>Greek salad</h3>
+                <p>
+                  The famous greek salad of crispy lettuce, peppers, olives and
+                  our Chicago style feta cheese, garnished with crunchy garlic
+                  and rosemary croutons.
+                </p>
+                <p>
+                  Order a delivery <img src={bike} className="bike-icon" />
+                </p>
+              </div>
+            </section>
+            <section>
+              <img src={special1} />
+              <div>
+                <h3>Greek salad</h3>
+                <p>
+                  The famous greek salad of crispy lettuce, peppers, olives and
+                  our Chicago style feta cheese, garnished with crunchy garlic
+                  and rosemary croutons.
+                </p>
+                <p>
+                  Order a delivery <img src={bike} className="bike-icon" />
+                </p>
+              </div>
+            </section>
+            <section>
+              <img src={special1} />
+              <div>
+                <h3>Greek salad</h3>
+                <p>
+                  The famous greek salad of crispy lettuce, peppers, olives and
+                  our Chicago style feta cheese, garnished with crunchy garlic
+                  and rosemary croutons.
+                </p>
+                <p>
+                  Order a delivery <img src={bike} className="bike-icon" />
+                </p>
+              </div>
+            </section>
           </div>
         </div>
       </section>
-      <section className="testimonials"></section>
+      <section className="testimonials">
+        <h1>Testimonials</h1>
+        <div className="testimonials-content">
+          <div className="testimonial">
+            <img src={stars} className="stars" />
+            <div>
+              <img src={person1} />
+              <p>Jane Morrow</p>
+            </div>
+            <p>
+              Absolutely incredible! The food was bursting with flavor and the
+              service was top-notch!
+            </p>
+          </div>
+          <div className="testimonial">
+            <img src={stars} className="stars" />
+            <div>
+              <img src={person2} />
+              <p>Steven Round</p>
+            </div>
+            <p>Hands down the best meal I’ve had in a long time!</p>
+          </div>
+          <div className="testimonial">
+            <img src={stars} className="stars" />
+            <div>
+              <img src={person3} />
+              <p>Amanda Jones</p>
+            </div>
+            <p>
+              From the moment we walked in, we were treated like royalty. The
+              food was beyond delicious, and the portions were generous.
+            </p>
+          </div>
+          <div className="testimonial">
+            <img src={stars} className="stars" />
+            <div>
+              <img src={person4} />
+              <p>Daniel Stefan</p>
+            </div>
+            <p>
+              Wow! Every bite was a delight. The ambiance is warm and inviting.
+            </p>
+          </div>
+        </div>
+      </section>
       <section className="about">
         <div className="about-content">
           <div className="about-left-content">
@@ -27,17 +116,12 @@ const Main = () => {
               <p>Chicago</p>
             </div>
             <p>
-              Welcome to Little Lemon! Our website is designed to bring the best
-              of our restaurant right to your fingertips. Browse our menu, make
-              reservations, and discover our story—all in one place. Whether
-              you're looking for fresh Mediterranean flavors, special offers, or
-              event details, our website has everything you need. Order online
-              for pickup or delivery and experience the taste of Little Lemon
-              from the comfort of your home.
+              Little Lemon is a charming neighborhood bistro that serves simple
+              food and classic cocktails in a lively but casual environment. The
+              restaurant features a locally-sourced menu with daily specials.
             </p>
           </div>
           <div className="about-right-content">
-            <img src={image1} className="about-image1" />
             <img src={image2} className="about-image2" />
           </div>
         </div>
