@@ -1,5 +1,5 @@
 import "./App.css";
-import Booking from "./components/Booking";
+import BookingPage from "./components/BookingPage";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Main from "./components/Main";
@@ -22,7 +22,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/reserve" element={<Booking />} />
+        <Route path="/reserve" element={<BookingPage />} />
       </Routes>
 
       <Footer />
