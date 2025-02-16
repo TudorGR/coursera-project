@@ -1,10 +1,10 @@
 import React from "react";
-import image from "../assets/restauranfood.jpg";
+import image from "../assets/greek salad.jpg";
 
 const Footer = () => {
   return (
     <footer>
-      <img src={image} width={100} />
+      <img src={image} />
       <nav>
         <p>Navigation</p>
         <ul>
