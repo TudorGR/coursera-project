@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../assets/Logo.svg";
 import hamburger from "../assets/🦆 icon _hamburger menu.svg";
 import basket from "../assets/basket .svg";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [visible, setVisible] = useState(true);
@@ -21,10 +22,12 @@ const Nav = () => {
   return (
     <nav className={`navbar ${visible ? "visible" : "hidden"}`}>
       <div className="nav-container">
-        <img src={logo} />
+        <Link to="/">
+          <img src={logo} />
+        </Link>
         <ul>
           <li>
-            <a href="">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <a href="">About</a>
@@ -33,7 +36,7 @@ const Nav = () => {
             <a href="">Menu</a>
           </li>
           <li>
-            <a href="">Reservation</a>
+            <Link to="/reserve">Reservation</Link>
           </li>
           <li>
             <a href="">Order Online</a>
