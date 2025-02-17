@@ -372,3 +372,38 @@ footer img {
   transition: 0.1s;
   cursor: pointer;
 }
+/* table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid whitesmoke;
+}
+
+th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: whitesmoke;
+}
+
+td {
+  color: #555;
+}
+.history-table {
+  padding: 2rem;
+}
+.history-table h2 {
+  text-wrap: nowrap;
+  padding: 2rem 0;
+  text-align: center;
+}
