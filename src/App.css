@@ -10,6 +10,9 @@
 body {
   margin-top: 5rem;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* header */
 header {
@@ -236,7 +239,7 @@ footer img {
 }
 
 /* About */
-.about {
+#about {
   height: 30rem;
   max-width: 50rem;
   margin: auto;
@@ -249,12 +252,12 @@ footer img {
   gap: 2rem;
   height: 100%;
 }
-.about h1 {
+#abouth1 {
   font-family: "Markazi Text", serif;
   color: #f4ce14;
   font-size: 4rem;
 }
-.about p {
+#aboutp {
   font-size: 1rem;
   margin-bottom: 2rem;
 }
@@ -406,4 +409,10 @@ td {
   text-wrap: nowrap;
   padding: 2rem 0;
   text-align: center;
+}
+/* confirmed booking */
+.confirmed-booking {
+  width: 100%;
+  text-align: center;
+  margin: 15rem 0;
 }

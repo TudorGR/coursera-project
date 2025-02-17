@@ -25,8 +25,20 @@ const BookingForm = ({
   const handleGuestsChange = (e) => setGuests(e.target.value);
   const handleOccasionChange = (e) => setOccasion(e.target.value);
 
+  const isDateAndTimeBooked = (selectedDate, selectedTime) => {
+    return bookingData.some(
+      (booking) =>
+        booking.date === selectedDate && booking.time === selectedTime
+    );
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (isDateAndTimeBooked(date, time)) {
+      alert("This date and time are already booked. Please choose another.");
+      return;
+    }
 
     const newBooking = {
       id: Date.now(),
@@ -36,10 +48,11 @@ const BookingForm = ({
       occasion,
     };
     setBookingData([...bookingData, newBooking]);
-    alert(
-      `Reservation details: Date - ${date}, Time - ${time}, Guests - ${guests}, Occasion - ${occasion}`
-    );
     navigate("/confirm");
+  };
+
+  const isFormValid = () => {
+    return date && time && guests >= 1 && guests <= 10 && occasion;
   };
 
   return (
@@ -55,6 +68,7 @@ const BookingForm = ({
         value={date}
         onChange={handleDateChange}
         aria-required="true"
+        required
       />
 
       <label htmlFor="res-time">Choose time</label>
@@ -63,6 +77,7 @@ const BookingForm = ({
         value={time}
         onChange={handleTimeChange}
         aria-live="polite"
+        required
       >
         {availableTimes.map((availableTime) => (
           <option key={availableTime} value={availableTime}>
@@ -81,6 +96,7 @@ const BookingForm = ({
         value={guests}
         onChange={handleGuestsChange}
         aria-required="true"
+        required
       />
 
       <label htmlFor="occasion" onChange={handleOccasionChange}>
@@ -91,12 +107,18 @@ const BookingForm = ({
         value={occasion}
         onChange={handleOccasionChange}
         aria-required="true"
+        required
       >
         <option>Birthday</option>
         <option>Anniversary</option>
       </select>
 
-      <input type="submit" value="Make Your reservation" />
+      <input
+        type="submit"
+        value="Make Your reservation"
+        disabled={!isFormValid()}
+        aria-label="On Click"
+      />
     </form>
   );
 };

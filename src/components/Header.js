@@ -7,7 +7,7 @@ const Header = () => {
       <div class="hero-overlay"></div>
       <div className="header-content">
         <div>
-          <h1>Little Lemon</h1>
+          <h1 data-testid="name">Little Lemon</h1>
           <h2>Chicago</h2>
         </div>
         <p>
@@ -15,7 +15,7 @@ const Header = () => {
           Lemon. Enjoy fresh ingredients, expertly crafted dishes, and
           exceptional service. Book your table today!
         </p>
-        <Link to="/reserve" className="reserve-btn">
+        <Link to="/reserve" className="reserve-btn" aria-label="On Click">
           Reserve a table
         </Link>
       </div>
